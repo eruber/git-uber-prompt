@@ -138,5 +138,16 @@ The *other* git config bash settings discussed in detail in the header of **posh
 - **bash.enableStatusSymbol**
 
 
-#To Do
-1. Attempt to optimize the git prompt portion of the code, it is rather slow.
+#Thanks
+Many appreciations go out to those individuals whose websites helped me to learn how to accomplish my design goals for a git prompt. The websites listed below are my attempt at an exhaustive list of my wanderings.
+
+- [The posh-git-bash by lyze on GitHub](https://github.com/lyze/posh-git-sh)
+- [Bash Reference Manual](https://www.gnu.org/software/bash/manual/bashref.html)
+- [Git's Bash Prompt on GitHub](https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh)
+- [Bash-it a Community Bash Framework](https://github.com/Bash-it/bash-it)
+- [Customize Git Bash Prompt on Windows](https://alanbarber.com/2015/12/30/how-to-customize-the-git-for-windows-bash-shell-prompt/)
+- [git-aware-prompt on GitHub](https://github.com/jimeh/git-aware-prompt)
+- [nixCraft's How to Change/Setup Bash Prompt](https://www.cyberciti.biz/tips/howto-linux-unix-bash-shell-setup-prompt.html)
+- [Improving Your Gti Experience in Bash](http://maximomussini.com/posts/bash-git-prompt/)
+- [Ultimate Git PS1 Bash Prompt](http://mediadoneright.com/content/ultimate-git-ps1-bash-prompt)
+- [Add git Branch Name to Bash Prompt](https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt)

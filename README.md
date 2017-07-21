@@ -1,5 +1,5 @@
 # git-uber-prompt
-A configurable bash prompt for git that integrates some of the best features from other git prompt scripts and heavily based on the [posh-git-sh prompt](https://github.com/lyze/posh-git-sh).
+A configurable bash prompt for git that integrates some of the best features from other git prompt scripts and is heavily based on the [posh-git-sh prompt](https://github.com/lyze/posh-git-sh).
 
 # Repo Contents
 The non-self explanatory files in this repository are:
@@ -16,7 +16,7 @@ The non-self explanatory files in this repository are:
 
 	Modified version of **git-prompt.sh** from [posh-git-sh prompt](https://github.com/lyze/posh-git-sh). The changes made most notably are:
 
-	1. Re-ordered the **Index** and **Working Directory** git file status indicators. I tend to theing of them in the order shown in [NDP Software's Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html), namely:
+	1. Re-ordered the **Index** and **Working Directory** git file status indicators. I tend to think of them in the order shown in [NDP Software's Git Cheatsheet](https://ndpsoftware.com/git-cheatsheet.html), namely:
 		
 		**Stash** --> **Working Directory** --> **Index**
 	
@@ -31,10 +31,10 @@ The non-self explanatory files in this repository are:
 
 # Installation
 1. Copy the **.bash\_aliases** file to your home directory or where ever your **.bashrc** file lives.
-If you already have a **.bash_aliases** file, then integrate the contents of into your version.
+If you already have a **.bash_aliases** file, then integrate the contents into your version.
 2. Add the following line to your **.bashrc** file (if it is not already there)::
 
-		source ~./.bash_aliases
+		source ~/.bash_aliases
 
 
 
@@ -42,7 +42,7 @@ If you already have a **.bash_aliases** file, then integrate the contents of int
 The following sections provide some screen shots of the prompt in various configurations.
 
 ## Minimal Prompt
-The minimal prompt occurs when the current directory is not the root of a git project and it consists of four parts:
+The minimal prompt occurs when the current directory is *not* the root of a git project and it consists of four parts:
 
 1. Time of Day
 2. Bash Version
@@ -66,8 +66,7 @@ By default, the status summary has the following format::
 
 	[S:n {HEAD-name} x +A ~B -C !D | +E ~F -G !H] << remote-repository-name >>
 
-* S:n is the **Stash Indicator**. If the Stash is empty it will display **S:0** and if the Stash has one saved instance, it will display **S:1**. By default, if empty, the **Stash Indicator** is not displayed.
-
+* S:n is the **Stash Indicator**. If the Stash is empty it will display **S:0** and if the Stash has one saved instance, it will display **S:1**. By default, if empty, the **Stash Indicator** is not displayed. See the section *Git Prompt Configuration* below for how to change this behavior.
 * `{HEAD-name}` is the **Current Branch Indicator**, or the SHA of a detached HEAD. The color
   of `{HEAD-name}` represents the divergence from upstream. `{HEAD-name}` also
   changes to indicate progress if you are in the middle of a cherry-pick, a
@@ -81,7 +80,7 @@ By default, the status summary has the following format::
   * `↑` the branch is **ahead** of its remote
   * `↓` the branch is **behind** its remote
   * `↕` the branch is both **ahead** of and **behind** its remote
-* Status changes are indicated by prefixes to `A` through `H`, where `A` through
+* **File Status** changes are indicated by prefixes to `A` through `H`, where `A` through
   `D` represent counts for the **working directory** and `E` through `H` represent counts for
   the **Index**. As in `git status`, **index status** is dark green and
   **working directory** status is dark red.
@@ -89,9 +88,16 @@ By default, the status summary has the following format::
   * `~` modified
   * `-` removed
   * `!` conflicting
+* The letters themselves, A thru H, will be integers indicating how many files of each of the above **File Status** indicators are in the **Working Directory** (A thru D) and staged in the **Index** (E thru H).
 * The angle brackets << and >> are used to delimit the name of the remote repository, if there is one; otherwise, **<< No Remote Repo Defined >>** is displayed.
 
+The following images demonstrate some of the more common prompt indicators.
 
+![File Status Indicators](http://i.imgur.com/AOFurIG.png)
+
+![After Commit](http://i.imgur.com/5oFYZz7.png)
+
+![Maximum Indicators Dislpayed](http://i.imgur.com/Zjws3KQ.png)
 
 # Git Prompt Configuration
 See the header of the **posh-git-prompt.sh** for complete details on what git configuration settings are available to control what the git prompt displays. The two configuration settings that you may want to set to something other than their default values are:

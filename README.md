@@ -89,7 +89,7 @@ By default, the status summary has the following format::
   * `-` removed
   * `!` conflicting
 * The letters themselves, A thru H, will be integers indicating how many files of each of the above **File Status** indicators are in the **Working Directory** (A thru D) and staged in the **Index** (E thru H).
-* The angle brackets << and >> are used to delimit the name of the remote repository, if there is one; otherwise, **<< No Remote Repo Defined >>** is displayed.
+* The angle brackets << and >> are used to delimit the name of the **remote repository**, if there is one; otherwise, **<< No Remote Repo Defined >>** is displayed.
 
 The following images demonstrate some of the more common prompt indicators.
 
@@ -98,9 +98,12 @@ The following images demonstrate some of the more common prompt indicators.
 ![After Commit](http://i.imgur.com/5oFYZz7.png)
 
 ![Maximum Indicators Dislpayed](http://i.imgur.com/Zjws3KQ.png)
+The above images illustrates turning on the git config bash settings to maximize the information displayed.
+
+![Git Stash Indicator Changes](http://i.imgur.com/TNDHVKQ.png)
 
 # Git Prompt Configuration
-See the header of the **posh-git-prompt.sh** for complete details on what git configuration settings are available to control what the git prompt displays. The two configuration settings that you may want to set to something other than their default values are:
+See the header of the **posh-git-prompt.sh** file for complete details on what git configuration settings are available to control what the git prompt displays. The two configuration settings that you may want to set to something other than their default values are:
 
 1. **bash.showStatusWhenZero**
 
@@ -110,8 +113,8 @@ See the header of the **posh-git-prompt.sh** for complete details on what git co
 
 2. **bash.showRemoteRepoName**
 
-	Set to **true** (*the Default*) to include the Remote Repository Name in the git prompt.
-	Set to **false** to remove the Remote Repository Name from the git prompt.
+	Set to **true** (*the Default*) to include the **Remote Repository Name** in the git prompt.
+	Set to **false** to remove the **Remote Repository Name** from the git prompt.
 
 For example::
 

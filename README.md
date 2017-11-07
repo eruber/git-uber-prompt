@@ -138,7 +138,7 @@ The *other* git config bash settings discussed in detail in the header of **posh
 - **bash.enableStatusSymbol**
 
 
-#Thanks
+# Thanks
 Many appreciations go out to those individuals whose websites helped me to learn how to accomplish my design goals for a git prompt. The websites listed below are my attempt at an exhaustive list of my wanderings.
 
 - [The posh-git-bash by lyze on GitHub](https://github.com/lyze/posh-git-sh)

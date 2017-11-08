@@ -137,6 +137,15 @@ The *other* git config bash settings discussed in detail in the header of **posh
 - **bash.showUpstream**
 - **bash.enableStatusSymbol**
 
+# Python Virtual Environments
+When activating a Python virtual environment, the prompt should change to indicate the activation. When deactivating a Python
+virtual environment the prompt should change again. The latest update fixes an issue supporting this behavior.
+
+As show in the figure below (demonstrated on Ubuntu), the git prompt now changes to indicate activation and deactivation of a Python
+virtual environment.
+
+![python virtual env support](https://i.imgur.com/J5aafAe.png)  
+
 
 # Thanks
 Many appreciations go out to those individuals whose websites helped me to learn how to accomplish my design goals for a git prompt. The websites listed below are my attempt at an exhaustive list of my wanderings.

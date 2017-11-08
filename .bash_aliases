@@ -40,9 +40,24 @@ prompt_command () {
     # see posh-git-prompt.sh
     local gitstring=$(__posh_git_echo)
 
-    ps1_suffix=" ${YELLOW_BOLD}\w\n${WHITE_BOLD}$ "
     
-    PS1="${ps1_prefix}${gitstring}${ps1_suffix}"
+    #echo $PS1
+    # Strip out any potential Python virtual env between the parens
+    st=$PS1
+    PS1=${PS1#*\(}
+    PS1=${PS1%\)*}
+    #echo $PS1
+
+    if [ "$st" == "$PS1" ]; then
+        # No Python virtual env in prompt
+        ps1_suffix=" ${YELLOW_BOLD}\w\n${WHITE_BOLD}$ "
+        PS1="${ps1_prefix}${gitstring}${ps1_suffix}"
+    else
+        # Display Python virtual env in prompt
+        ps1_suffix_1=" ${YELLOW_BOLD}\w\n"
+        ps1_suffix_2="${WHITE_BOLD}(${PS1}) $ "
+        PS1="${ps1_prefix}${gitstring}${ps1_suffix_1}${ps1_suffix_2}"
+    fi
 }
 
 
